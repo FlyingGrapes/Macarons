@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reflections</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .reflection-entry {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-left: 5px solid #555;
+      max-width: 800px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .reflection-entry h2 {
+      margin-top: 0;
+    }
+
+    .back-button {
+      margin: 20px;
+      display: inline-block;
+      background-color: #ccc;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .white-space-preserve {
+      white-space: pre-line;  /* Preserves whitespace and line breaks */
+    }
+
+    #popupOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      z-index: 999;
+    }
+
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-height: 400px; /* Maximum height for the popup */
+      overflow-y: auto; /* Enables vertical scrolling if content exceeds the height */
+      overflow-x: auto; /* Enables horizontal scrolling if content exceeds the width */
+      max-width: 600px; 
+      width: 80%;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+  </style>
+  
+  
+</head>
+<body>
+
+  <header>
+    <h1>S001: Grow with G.R.I.T</h1>
+    <p>School Reflections based on lessons and assignments</p>
+  </header>
+
+  <!-- Reflection Template -->
+  <!-- <div class="reflection-entry">
+    <h2>Lesson 01: UI Principles</h2>
+    <p><strong>Date:</strong> 2025-04-25</p>
+    <p><strong>What I Learned:</strong> Basic layout principles, visual hierarchy, proximity, alignment.</p>
+    <p><strong>Challenges:</strong> Ba1lancing whitespace while maintaining content density.</p>
+    <p><strong>Reflection:</strong> I realised how important user flow is. I will apply better grouping in my next wireframe.</p>
+    <p><strong>Next Steps:</strong> Study mobile-first design and Figma constraints.</p>
+    <button id="openPopupBtn">View full reflection</button> -->
+
+    <!-- overlay and popup -->
+    <!-- <div id="popupOverlay"></div>
+    <div id="popup">
+      <h2>Full Reflection: Lesson 01</h2>
+      <p>During this lesson, I learned how UI principles shape user experience. I saw how spacing, alignment, and proximity guide users' attention and interaction. At first, I found balancing whitespace challenging—I kept either overcrowding or underusing space. But after peer feedback, I started noticing how deliberate spacing makes designs feel more polished and easier to read. Next time, I’ll plan layouts with content grouping and a mobile-first approach in mind.</p>
+      <button id="closePopupBtn">Close</button>
+    </div>
+  </div> -->
+  
+  <!-- Reflection Lesson 01 -->
+  <div class="reflection-entry">
+    <h2>Developing Grit Mindsets</h2>
+    <p><strong>Date:</strong> 2025-04-25</p>
+    <p><strong>What I Learned:</strong> The importance of identifying personal growth keywords like "resilience" and "yet" as anchors for overcoming challenges. Recognizing that failures are stepping stones rather than setbacks was a key insight for fostering a growth mindset.</p>
+    <p><strong>Challenges:</strong> Shifting my perspective on failure was difficult at first. I tend to get frustrated when things don't go as planned, and rethinking these moments as opportunities for growth took conscious effort.</p>
+    <p><strong>Reflection:</strong> I realized that when I face setbacks, I need to reframe them as learning opportunities. For example, instead of saying "I can't do this," I now try to say "I can’t do this yet." This helps me stay motivated and focused on improvement. Tracking my progress, including failures, will help me see how far I’ve come.</p>
+    <p><strong>Next Steps:</strong> Continue identifying my growth keywords and integrate them into daily practices. I will set monthly challenges to test my growth mindset and reflect on my learning patterns. I will also start keeping a log of my failures to recognize their value in the growth process.</p>
+    <button id="openPopupBtn">View full reflection</button>
+    
+    <!-- overlay and popup -->
+    <div id="popupOverlay"></div>
+    <div id="popup">
+      <h2>Full Reflection: Lesson 01</h2>
+      <p class="white-space-preserve">Reflection on learning (approximately 300 words)  
+        1a. Essay on what grit and mind-sets mean to you.  
+        o Describe the concept of grit and mind-sets and explain their significance to one’s success.  
+        o Explain the relationship between grit and mind-sets.   
+        o Develop an individual formula/statement for success.    
+        I believe that grit is the ability to pursue long-term goals with unrelenting desire and persistence.  Even in the face of waning motivation and impending challenges, it is the silent force that keeps up effort over months or years.  The internal beliefs people have about their capacity to learn, develop, and change are referred to as mindsets, especially the difference between a fixed and a growth mindset as defined by Carol Dweck.  A growth mindset recognises that intelligence and skill are only beginnings and that perseverance and persistent work are necessary to reach true mastery.
+        One cannot stress the importance of mindsets and grit in attaining achievement.  Grit, or the will to keep going, and a growth-oriented mindset are what really define one's potential, even when talent can open doors.  While a growth mindset encourages adaptability and the never-ending quest for knowledge in the face of failure, grit keeps people going when there are no instant rewards.
+         These two forces are mutually reinforcing.  Grit is naturally fostered by a growth mentality; we are more inclined to persevere through failure and setbacks when we think that abilities can be developed.  On the other hand, gritted people frequently develop a growth mentality with experience, realising that hard work, not natural talent, is what really propels success.
+        My personal formula for success is:
+        "Resilience in effort, humility in learning, and faith in continuous evolution."
+        I believe that success is not a fixed destination but a dynamic journey shaped by persistent striving and an openness to change.
+
+        Reflection for action (approximately 300 words)  
+        1b. Reflection on key actions to nurture a growth mindset.   
+        o Assess the level of your grittiness in the three domains of your life.   
+        family wise our bond is so messy. Friendship wise, I am still learning making the right friends, and when to abandon unwanted friendships. Academic wise, my grades are terrible, but I am willing to learn if it is hands on. I don’t really have much certificates for recognition though. Professional development I am currently working on it. I have been idling to long and now decided to have personal projects.
+        o Identify and commit to two personal growth areas of grittiness.  
+        1. Maintainging consistent discipline an dmomentom even when novelty of project fades.
+        2. build alternative ways to solve complex and challenges issues. 
+        o Identify two thinking patterns that hinders the development of your growth mind-set. 
+        Instituting a structured weekly review to evaluate both progress and obstacles objectively.
+
+        Breaking large goals into micro-milestones, allowing for consistent psychological reinforcement through achievable victories.
+
+        Practicing conscious self-compassion, reframing failures as essential learning experiences rather than personal shortcomings. 
+        o Develop three key actions to track a commitment to growth mind-set. 
+        Weekly Reflective Journaling: I will document times of challenge, failure, and perseverance, including techniques and lessons learnt.  This practice will allow me to evaluate growth patterns, adjust my techniques, and promote the narrative that setbacks are opportunities for improvement.
+
+        Micro-Goal Setting and Review: I will divide larger objectives into quantifiable milestones and hold bi-weekly reviews to track progress.  By celebrating small victories, I will build momentum and resilience, reminding myself that mastery is the result of consistent, deliberate effort rather than unexpected leaps.
+
+        Identify personal keywords/phrase/quote as signpost to nurture growth mindset
+        Recognise thinking pattern to see failure as an opportunity for growth
+        Develop key actions to track a commitment to growth mindse
+        
+      </p>
+      <button id="closePopupBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Reflection Lesson 02?? -->
+  <div class="reflection-entry">
+    <h2>Mindset Shift: Fixed vs Growth</h2>
+    <p><strong>Date:</strong> 2025-04-25</p>
+    <p><strong>What I Learned:</strong> I learned to distinguish between fixed and growth mindsets. A fixed mindset assumes abilities are static, leading to fear of failure and avoiding challenges. On the other hand, a growth mindset thrives on learning from mistakes and continuously improving.</p>
+    <p><strong>Challenges:</strong> I often catch myself falling into fixed mindset thinking, especially when facing failure or tough challenges. I tend to think "I'm not good at this" instead of recognizing opportunities for growth.</p>
+    <p><strong>Reflection:</strong> By identifying fixed mindset thinking patterns, I can reframe them. For example, instead of saying "I’ll never be able to do this," I now try to say "I may not be able to do this yet, but with effort, I can improve." This shift is helping me become more open to challenges and mistakes. I’m also working on identifying **thinking traps** like catastrophizing and self-doubt.</p>
+    <p><strong>Next Steps:</strong> I will actively challenge fixed mindset thoughts and replace them with growth-oriented phrases like “not yet,” “effort leads to improvement,” and “mistakes are opportunities to learn.” I’ll continue identifying thinking traps and reframe them with optimistic, solution-focused thinking. I’ll also keep a journal of growth moments and setbacks to track how I evolve my mindset.</p>
+    <button id="openPopupBtn">View full reflection</button>
+    
+
+    <!-- overlay and popup -->
+    <div id="popupOverlay"></div>
+    <div id="popup">
+      <h2>Full Reflection: Lesson 01</h2>
+     <button id="closePopupBtn">Close</button>
+    </div>
+  </div>
+  
+
+  <!-- Copy and paste the .reflection-entry block for each new reflection -->
+
+  <a href="/indexHome.html" class="back-button">← Back to Home</a>
+
+  <script>
+    // Get elements
+    const openPopupBtn = document.getElementById('openPopupBtn');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popup = document.getElementById('popup');
+    const popupOverlay = document.getElementById('popupOverlay');
+
+    // Open pop-up
+    openPopupBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+        popupOverlay.style.display = 'block';
+    });
+
+    // Close pop-up
+    closePopupBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+        popupOverlay.style.display = 'none';
+    });
+
+    // Close pop-up if overlay is clicked
+    popupOverlay.addEventListener('click', () => {
+        popup.style.display = 'none';
+        popupOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
