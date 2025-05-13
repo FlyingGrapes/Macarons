@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reflections</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .reflection-entry {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-left: 5px solid #555;
+      max-width: 800px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .reflection-entry h2 {
+      margin-top: 0;
+    }
+
+    .back-button {
+      margin: 20px;
+      display: inline-block;
+      background-color: #ccc;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .white-space-preserve {
+      white-space: pre-line;  /* Preserves whitespace and line breaks */
+    }
+
+    #popupOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      z-index: 999;
+    }
+
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-height: 400px; /* Maximum height for the popup */
+      overflow-y: auto; /* Enables vertical scrolling if content exceeds the height */
+      overflow-x: auto; /* Enables horizontal scrolling if content exceeds the width */
+      max-width: 600px; 
+      width: 80%;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+  </style>
+  
+  
+</head>
+<body>
+
+  <header>
+    <h1>S001: Grow with G.R.I.T</h1>
+    <p>School Reflections based on lessons and assignments</p>
+  </header>
+
+  <!-- Reflection Template -->
+  <!-- <div class="reflection-entry">
+    <h2>Lesson 01: UI Principles</h2>
+    <p><strong>Date:</strong> 2025-04-25</p>
+    <p><strong>What I Learned:</strong> Basic layout principles, visual hierarchy, proximity, alignment.</p>
+    <p><strong>Challenges:</strong> Ba1lancing whitespace while maintaining content density.</p>
+    <p><strong>Reflection:</strong> I realised how important user flow is. I will apply better grouping in my next wireframe.</p>
+    <p><strong>Next Steps:</strong> Study mobile-first design and Figma constraints.</p>
+    <button id="openPopupBtn">View full reflection</button> -->
+
+    <!-- overlay and popup -->
+    <!-- <div id="popupOverlay"></div>
+    <div id="popup">
+      <h2>Full Reflection: Lesson 01</h2>
+      <p>During this lesson, I learned how UI principles shape user experience. I saw how spacing, alignment, and proximity guide users' attention and interaction. At first, I found balancing whitespace challenging—I kept either overcrowding or underusing space. But after peer feedback, I started noticing how deliberate spacing makes designs feel more polished and easier to read. Next time, I’ll plan layouts with content grouping and a mobile-first approach in mind.</p>
+      <button id="closePopupBtn">Close</button>
+    </div>
+  </div> -->
+
+
+  <!-- Reflection LESSON 02?? -->
+  <div class="reflection-entry">
+    <h2>Mindset Shift: Fixed vs Growth</h2>
+    <p><strong>Date:</strong> 2025-04-25</p>
+    <p><strong>What I Learned:</strong> I learned to distinguish between fixed and growth mindsets. A fixed mindset assumes abilities are static, leading to fear of failure and avoiding challenges. On the other hand, a growth mindset thrives on learning from mistakes and continuously improving.</p>
+    <p><strong>Challenges:</strong> I often catch myself falling into fixed mindset thinking, especially when facing failure or tough challenges. I tend to think "I'm not good at this" instead of recognizing opportunities for growth.</p>
+    <p><strong>Reflection:</strong> By identifying fixed mindset thinking patterns, I can reframe them. For example, instead of saying "I’ll never be able to do this," I now try to say "I may not be able to do this yet, but with effort, I can improve." This shift is helping me become more open to challenges and mistakes. I’m also working on identifying **thinking traps** like catastrophizing and self-doubt.</p>
+    <p><strong>Next Steps:</strong> I will actively challenge fixed mindset thoughts and replace them with growth-oriented phrases like “not yet,” “effort leads to improvement,” and “mistakes are opportunities to learn.” I’ll continue identifying thinking traps and reframe them with optimistic, solution-focused thinking. I’ll also keep a journal of growth moments and setbacks to track how I evolve my mindset.</p>
+    <button id="openPopupBtn">View full reflection</button>
+    
+
+    <!-- overlay and popup -->
+    <div class="popupOverlay"></div>
+    <div class="popup">
+      <h2>Full Reflection: Lesson 01</h2>
+     <button class="closePopupBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Reflection LESSON 04 -->
+  <div class="reflection-entry">
+    <h2>Lesson 04: Goal Hierarchy & Personal Reflections</h2>
+    <p><strong>Date:</strong> 2025-05-11</p>
+    <p><strong>What I Learned:</strong> How to structure my long-term ambitions into actionable goals using a goal hierarchy framework.</p>
+    <p><strong>Challenges:</strong> I often feel overwhelmed when starting new goals and find it hard to maintain consistency without immediate results.</p>
+    <p><strong>Reflection:</strong> A system called goal hierarchy aids in dividing big, long-term goals into more achievable, smaller tasks. It starts with high-level objectives, which serve as a representation of your ultimate desires and establish the course for all of your endeavors. These bigger goals are broken down into mid-level objectives, which concentrate on important areas or benchmarks that will enable you to advance, in order to make them attainable. Lastly, low-level goals—the practical, daily activities that propel you forward and guarantee consistent advancement towards your more ambitious goals—support these. In addition to making goals more reachable, this methodical technique keeps you motivated and focused throughout the process.</p>
+    <p><strong>Next Steps:</strong> Refine and track my selected top-level goal on editing and photography using a tiered structure:</p>
+    <ul>
+      <li><strong>Top-Level Goal:</strong> Improve my editing and photography skills</li>
+      <li><strong>Mid-Level:</strong> Take a structured course, practice editing weekly, and build a portfolio</li>
+      <li><strong>Low-Level:</strong> Research courses, maintain a regular editing schedule, seek feedback on my work</li>
+    </ul>
+    <button id="openPopupBtn">View full reflection</button>
+  
+    <!-- overlay and popup -->
+    <div id="popupOverlay"></div>
+    <div id="popup">
+      <h2>Full Reflection: Lesson 04</h2>
+      <p>The majority of my objectives centre on personal development, such as enhancing self-discipline, boosting self-esteem, and honing creative abilities. I've discovered that I have the most trouble establishing new objectives, particularly when they seem daunting. But once I start, I usually stick with it, as shown by accomplishments like organising a photo shoot and going back to school in spite of my nervousness. I'm discovering that making progress boosts self-esteem and that taking tiny, regular steps counts more than waiting for the ideal circumstances.</p>
+  
+      <p>One important element has been the support of friends, mentors, and school communities. Other people's encouragement frequently provides me with the motivation I need to keep going. Structured settings, such as guided modules or school, also assist me in maintaining my focus and accountability.</p>
+  
+      <p>Personal challenges like anxiety, self-doubt, and perfectionism have often slowed my progress. I also struggle with staying disciplined when I don’t see immediate results. However, becoming more self-aware of these patterns has helped me manage them better.</p>
+  
+      <p>My desire to develop and show myself that I am capable usually serves as my motivation. However, when I'm feeling overburdened or when things are moving slowly, I occasionally lose focus. Remaining focused on my larger objectives aids in my realignment.</p>
+  
+      <p>I've consistently worked hard, particularly in areas like personal development and creative endeavours. I'm proud of the little steps I've done and how far I've come from where I started, even though I know I can push harder in some areas.</p>
+  
+      <p>My current top 5 goals are:
+      <ol>
+        <li>Improve my editing and photography skills</li>
+        <li>Build healthy and consistent daily habits</li>
+        <li>Enhance my personal style and presentation</li>
+        <li>Strengthen time management and self-discipline</li>
+        <li>Develop my e-portfolio and personal projects</li>
+      </ol>
+      </p>
+      <button id="closePopupBtn">Close</button>
+    </div>
+  </div>
+    
+
+
+  
+  <!-- REPEAT THIS BLOCK FOR EACH REFLECTION -->
+  <div class="reflection-entry">
+    <h2>Lesson 01 - Developing Grit Mindsets</h2>
+    <p><strong>Date:</strong> 2025-04-25</p>
+    <p><strong>What I Learned:</strong> ...</p>
+    <button class="openPopupBtn">View full reflection</button>
+
+    <!-- Popup for this reflection -->
+    <div class="popupOverlay"></div>
+    <div class="popup">
+      <h2>Full Reflection: Lesson 01</h2>
+      <p class="white-space-preserve">
+        Full detailed reflection content goes here...
+      </p>
+      <button class="closePopupBtn">Close</button>
+    </div>
+  </div>
+  <!-- Copy and paste the .reflection-entry block for each new reflection -->
+
+  <a href="/indexHome.html" class="back-button">← Back to Home</a>
+
+  <script>
+    document.querySelectorAll('.reflection-entry').forEach(entry => {
+      const openBtn = entry.querySelector('.openPopupBtn');
+      const closeBtn = entry.querySelector('.closePopupBtn');
+      const popup = entry.querySelector('.popup');
+      const overlay = entry.querySelector('.popupOverlay');
+
+      openBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+      });
+
+      const closePopup = () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+      };
+
+      closeBtn.addEventListener('click', closePopup);
+      overlay.addEventListener('click', closePopup);
+    });
+  </script>
+  
+  
+</body>
+</html>

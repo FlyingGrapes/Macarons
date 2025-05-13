@@ -25,6 +25,7 @@
       border-left: 5px solid #555;
       max-width: 800px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     .reflection-entry h2 {
@@ -41,42 +42,83 @@
       font-weight: bold;
       border-radius: 5px;
     }
+
     .white-space-preserve {
-      white-space: pre-line;  /* Preserves whitespace and line breaks */
+      white-space: pre-line;
     }
 
-    #popupOverlay {
+    .popupOverlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
       display: none;
       z-index: 999;
     }
 
-    #popup {
+    .popup {
       position: fixed;
-      top: 50%;
-      left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       background: #fff;
       padding: 2rem;
       border-radius: 10px;
-      max-height: 400px; /* Maximum height for the popup */
-      overflow-y: auto; /* Enables vertical scrolling if content exceeds the height */
-      overflow-x: auto; /* Enables horizontal scrolling if content exceeds the width */
-      max-width: 600px; 
+      max-height: 80vh;
+      overflow-y: auto;
+      max-width: 600px;
       width: 80%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       display: none;
       z-index: 1000;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .popup button {
+      margin-top: 20px;
+    }
+
+    .tabs {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .tab-headers {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 10px 15px;
+      background: #eee;
+      border: none;
+      border-radius: 5px 5px 0 0;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: #ccc;
+    }
+
+    .tab-content {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #555;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .full-reflection {
+      margin-top: 15px;
     }
 
   </style>
-  
-  
 </head>
 <body>
 
@@ -85,126 +127,294 @@
     <p>School Reflections based on lessons and assignments</p>
   </header>
 
-  <!-- Reflection Template -->
-  <!-- <div class="reflection-entry">
-    <h2>Lesson 01: UI Principles</h2>
-    <p><strong>Date:</strong> 2025-04-25</p>
-    <p><strong>What I Learned:</strong> Basic layout principles, visual hierarchy, proximity, alignment.</p>
-    <p><strong>Challenges:</strong> Ba1lancing whitespace while maintaining content density.</p>
-    <p><strong>Reflection:</strong> I realised how important user flow is. I will apply better grouping in my next wireframe.</p>
-    <p><strong>Next Steps:</strong> Study mobile-first design and Figma constraints.</p>
-    <button id="openPopupBtn">View full reflection</button> -->
 
-    <!-- overlay and popup -->
-    <!-- <div id="popupOverlay"></div>
-    <div id="popup">
-      <h2>Full Reflection: Lesson 01</h2>
-      <p>During this lesson, I learned how UI principles shape user experience. I saw how spacing, alignment, and proximity guide users' attention and interaction. At first, I found balancing whitespace challenging—I kept either overcrowding or underusing space. But after peer feedback, I started noticing how deliberate spacing makes designs feel more polished and easier to read. Next time, I’ll plan layouts with content grouping and a mobile-first approach in mind.</p>
-      <button id="closePopupBtn">Close</button>
-    </div>
-  </div> -->
-  
-  <!-- Reflection Lesson 01 -->
-  <div class="reflection-entry">
-    <h2>Developing Grit Mindsets</h2>
-    <p><strong>Date:</strong> 2025-04-25</p>
-    <p><strong>What I Learned:</strong> The importance of identifying personal growth keywords like "resilience" and "yet" as anchors for overcoming challenges. Recognizing that failures are stepping stones rather than setbacks was a key insight for fostering a growth mindset.</p>
-    <p><strong>Challenges:</strong> Shifting my perspective on failure was difficult at first. I tend to get frustrated when things don't go as planned, and rethinking these moments as opportunities for growth took conscious effort.</p>
-    <p><strong>Reflection:</strong> I realized that when I face setbacks, I need to reframe them as learning opportunities. For example, instead of saying "I can't do this," I now try to say "I can’t do this yet." This helps me stay motivated and focused on improvement. Tracking my progress, including failures, will help me see how far I’ve come.</p>
-    <p><strong>Next Steps:</strong> Continue identifying my growth keywords and integrate them into daily practices. I will set monthly challenges to test my growth mindset and reflect on my learning patterns. I will also start keeping a log of my failures to recognize their value in the growth process.</p>
-    <button id="openPopupBtn">View full reflection</button>
-    
-    <!-- overlay and popup -->
-    <div id="popupOverlay"></div>
-    <div id="popup">
-      <h2>Full Reflection: Lesson 01</h2>
-      <p class="white-space-preserve">Reflection on learning (approximately 300 words)  
-        1a. Essay on what grit and mind-sets mean to you.  
-        o Describe the concept of grit and mind-sets and explain their significance to one’s success.  
-        o Explain the relationship between grit and mind-sets.   
-        o Develop an individual formula/statement for success.    
-        I believe that grit is the ability to pursue long-term goals with unrelenting desire and persistence.  Even in the face of waning motivation and impending challenges, it is the silent force that keeps up effort over months or years.  The internal beliefs people have about their capacity to learn, develop, and change are referred to as mindsets, especially the difference between a fixed and a growth mindset as defined by Carol Dweck.  A growth mindset recognises that intelligence and skill are only beginnings and that perseverance and persistent work are necessary to reach true mastery.
-        One cannot stress the importance of mindsets and grit in attaining achievement.  Grit, or the will to keep going, and a growth-oriented mindset are what really define one's potential, even when talent can open doors.  While a growth mindset encourages adaptability and the never-ending quest for knowledge in the face of failure, grit keeps people going when there are no instant rewards.
-         These two forces are mutually reinforcing.  Grit is naturally fostered by a growth mentality; we are more inclined to persevere through failure and setbacks when we think that abilities can be developed.  On the other hand, gritted people frequently develop a growth mentality with experience, realising that hard work, not natural talent, is what really propels success.
-        My personal formula for success is:
-        "Resilience in effort, humility in learning, and faith in continuous evolution."
-        I believe that success is not a fixed destination but a dynamic journey shaped by persistent striving and an openness to change.
-
-        Reflection for action (approximately 300 words)  
-        1b. Reflection on key actions to nurture a growth mindset.   
-        o Assess the level of your grittiness in the three domains of your life.   
-        family wise our bond is so messy. Friendship wise, I am still learning making the right friends, and when to abandon unwanted friendships. Academic wise, my grades are terrible, but I am willing to learn if it is hands on. I don’t really have much certificates for recognition though. Professional development I am currently working on it. I have been idling to long and now decided to have personal projects.
-        o Identify and commit to two personal growth areas of grittiness.  
-        1. Maintainging consistent discipline an dmomentom even when novelty of project fades.
-        2. build alternative ways to solve complex and challenges issues. 
-        o Identify two thinking patterns that hinders the development of your growth mind-set. 
-        Instituting a structured weekly review to evaluate both progress and obstacles objectively.
-
-        Breaking large goals into micro-milestones, allowing for consistent psychological reinforcement through achievable victories.
-
-        Practicing conscious self-compassion, reframing failures as essential learning experiences rather than personal shortcomings. 
-        o Develop three key actions to track a commitment to growth mind-set. 
-        Weekly Reflective Journaling: I will document times of challenge, failure, and perseverance, including techniques and lessons learnt.  This practice will allow me to evaluate growth patterns, adjust my techniques, and promote the narrative that setbacks are opportunities for improvement.
-
-        Micro-Goal Setting and Review: I will divide larger objectives into quantifiable milestones and hold bi-weekly reviews to track progress.  By celebrating small victories, I will build momentum and resilience, reminding myself that mastery is the result of consistent, deliberate effort rather than unexpected leaps.
-
-        Identify personal keywords/phrase/quote as signpost to nurture growth mindset
-        Recognise thinking pattern to see failure as an opportunity for growth
-        Develop key actions to track a commitment to growth mindse
-        
-      </p>
-      <button id="closePopupBtn">Close</button>
-    </div>
+  <div class="tabs">
+  <div class="tab-headers">
+    <button class="tab-btn active" data-tab="lesson2">Lesson 2 Reflection</button>
+    <button class="tab-btn" data-tab="lesson3">Lesson 3 CA</button>
+    <button class="tab-btn" data-tab="lesson4">Lesson 4 Reflection</button>
+    <button class="tab-btn" data-tab="lesson5">Lesson 5 CA</button>
+    <!-- Add more tabs here -->
   </div>
 
-  <!-- Reflection Lesson 02?? -->
-  <div class="reflection-entry">
-    <h2>Mindset Shift: Fixed vs Growth</h2>
-    <p><strong>Date:</strong> 2025-04-25</p>
-    <p><strong>What I Learned:</strong> I learned to distinguish between fixed and growth mindsets. A fixed mindset assumes abilities are static, leading to fear of failure and avoiding challenges. On the other hand, a growth mindset thrives on learning from mistakes and continuously improving.</p>
-    <p><strong>Challenges:</strong> I often catch myself falling into fixed mindset thinking, especially when facing failure or tough challenges. I tend to think "I'm not good at this" instead of recognizing opportunities for growth.</p>
-    <p><strong>Reflection:</strong> By identifying fixed mindset thinking patterns, I can reframe them. For example, instead of saying "I’ll never be able to do this," I now try to say "I may not be able to do this yet, but with effort, I can improve." This shift is helping me become more open to challenges and mistakes. I’m also working on identifying **thinking traps** like catastrophizing and self-doubt.</p>
-    <p><strong>Next Steps:</strong> I will actively challenge fixed mindset thoughts and replace them with growth-oriented phrases like “not yet,” “effort leads to improvement,” and “mistakes are opportunities to learn.” I’ll continue identifying thinking traps and reframe them with optimistic, solution-focused thinking. I’ll also keep a journal of growth moments and setbacks to track how I evolve my mindset.</p>
-    <button id="openPopupBtn">View full reflection</button>
+  <div class="tab-content-container">
+    <!-- Lesson 02 Reflection -->
+    <div class="tab-content active" id="lesson2">
+        <h2>Lesson 02 - Mindset Shift: Fixed vs Growth</h2>
+        <p><strong>Date:</strong> 2025-04-25</p>
+        <p><strong>Summary:</strong> Learned the difference between fixed and growth mindsets. I’m learning to reframe my thoughts and catch thinking traps. Still working on overcoming self-doubt and building discipline.</p>
+
+        <details>
+          <p>
+            L02
+            6
+            https://www.youtube.com/watch ?v=T6A-2Z59dJk
+            What is a fixed mindset?
+            What is a growth mindset?
+            The film tells the tale of László Polgár, who held the opinion that talent is something that is developed via hard work and the correct circumstances rather than something that is innate.  He raised his three daughters, Susan, Sophia, and Judit, to be chess champions as evidence of this.  All three were successful; Judit even defeated world champion Garry Kasparov to become the world's best female chess player.  Their accomplishments demonstrated that diligence and commitment are more important than innate ability.
+            The idea that your skills are predetermined from birth—that you can't change whether you're good at something or not—is known as a fixed mindset.  A growth mindset, on the other hand, is the conviction that abilities can be acquired with work, education, and perseverance. The Polgár sisters’ story is a clear example of the power of a growth mindset.
+
+            9-11
+            Personal Reflection: QUIZ (• Choose 5 statements which best describe you. • Note down the number next to the statement.)
+            Reflection based on chosen statements.
+            1. There are just some things I’ll never be good at.
+            It may be true, but I can become proficient at what I do if I maintain the discipline to concentrate on studying well.
+            2. When I make a mistake, I try to learn from it.
+            Yes, I do.  I adore constructive criticism.  It gives me other perspectives and ideas about how I present myself, which is helpful when I'm getting ready for a job or even when I'm handling difficult situations.
+            7. I feel good when I do something others cannot.
+            Naturally, it makes me happy to be able to assist others. 
+            8. It’s possible to change how intelligent you are.
+            sure, with time and work, you may expand your knowledge and life applications, be a better person
+            10. I enjoy taking on new unfamiliar challenges or tasks.
+            To see my development, I sometimes need to pull back from learning so that I can apply what I've learnt to real-world situations.
+            Results: 3 Even, 2 Odds (Growth Mindset)
+
+
+
+            13
+            Share 4- 5 examples of fixed and growth mindset statements, actions and behaviours you encounter in your daily lives and categorize them into Personal, Relationship and Academic / Career
+            (Personal) “I have not been acing this hobby/skill, I shall look for alternative ways for quality learn/practice instead of mindlessly practicing. Maybe I will ask people around me, or research tutorials online”
+            (Relationship) “Family has many conflicts, and tends to communicate loudly and rudely. Even though I understand their frustrations, it is not the way to be acting”
+            (Academic/Career) “I took a two-year deferment from polytechnic to explore different paths and take a short break. During that time, I pursued a private diploma in Fashion Design. Now, I’m about four years older than most of my peers. Although I’ve gained unique experiences, I recognize that my knowledge in both fashion and tech is still developing due to limited exposure and hands-on experience.”
+
+            15
+            Do you exhibit the characteristics of a growth or fixed mindset? 
+            Yes, I exhibit characteristics of a growth mindset. While I do struggle with laziness and often find it difficult to stay disciplined compared to some of my peers, I genuinely believe that with the right guidance, consistent effort, and a willingness to learn, I can improve and achieve my goals. I don't see my weaknesses as permanent, but rather as areas I can work on over time.
+
+            Provide examples of both mindsets to support your stance.  
+            Personal
+            Growth Mindset: I’ve started picking up new habits like journaling and self-reflection. Although it takes discipline, I believe these habits will help me grow over time. I also actively seek ways to improve my mindset and stay open to change.
+            Fixed Mindset: Sometimes I feel like I’m just naturally lazy or not a motivated person, which makes it harder for me to take the first step in forming positive routines.
+            Relationship
+            Growth Mindset: I’ve come to understand that communication is a skill. I make an effort to express myself more clearly and calmly, and I try to learn from past misunderstandings instead of shutting down.
+            Fixed Mindset: In the past, I used to think that if someone didn’t understand me from the start, we were just incompatible—so I would give up instead of working through the issues.
+            Academic / Career
+            Growth Mindset: I take initiative to look for resources, ask questions, and get hands-on practice when I don’t understand something. I also value constructive criticism from peers and use it to improve my work.
+            Fixed Mindset: There are times when I’ve thought, “I’ll never be as knowledgeable or quick at navigating between software, applications, and operating systems.” These doubts created a barrier that made me hesitant to explore and learn effectively.
+
+            19
+            List 3 Growth Mindset statements for the class to work on it together!
+            “Challenges help me grow stronger and more capable.”
+            “Feedback is an opportunity to get better, not a sign of failure.”
+            “My abilities can improve over time with consistent effort and learning.”
+            “I learn more when I step out of my comfort zone.”
+            “Success comes from trying, learning, and not giving up.”
+
+
+            22-24
+            404 Error. Cant view video.
+            23
+            How does our perspectives influence our feelings, thoughts and actions?
+            Our viewpoints have a big impact on how we feel, think, and behave.  They influence our interpretation of events, influencing our feelings of excitement, anxiety, or indifference.  An optimistic viewpoint encourages hope and action, whereas a pessimistic one frequently results in negative thoughts and avoidance.  Our perspectives shape how we think about ourselves and other people, and they also determine how we behave—whether we participate, retreat, or take the initiative.  In the end, our viewpoint serves as a filter that influences our mental and emotional reactions and moulds our behaviour appropriately.  Therefore, changing our point of view can change how we see and react to the world.
+
+
+            24
+            “Your vision is only actionable if you say it out loud. If you keep it to yourself, it will remain a figment of your imagination.” Simon Sinek  
+
+            Fixed Mindset Statement:
+            "I'm not good at this, so I should just give up."
+            Growth Mindset Statement:
+            "I’m not good at this yet, but with effort and persistence, I can improve and master it."
+
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" id="lesson3">
+        <h2>Lesson 03 CA Reflection -</h2>
+        <p><strong>Date:</strong> 2025-04-25</p>
+        <p><strong>Summary:</strong> Insert</p>
+        <details>
+          <p>
+            Reflection on learning (approximately 300 words)  
+            1a. Essay on what grit and mind-sets mean to you.  
+            - Describe the concept of grit and mind-sets and explain their significance to one’s success.  
+            - Explain the relationship between grit and mind-sets.   
+            - Develop an individual formula/statement for success.    
+            I believe that grit is the ability to pursue long-term goals with unrelenting desire and persistence.  Even in the face of waning motivation and impending challenges, it is the silent force that keeps up effort over months or years.  The internal beliefs people have about their capacity to learn, develop, and change are referred to as mindsets, especially the difference between a fixed and a growth mindset as defined by Carol Dweck.  A growth mindset recognises that intelligence and skill are only beginnings and that perseverance and persistent work are necessary to reach true mastery.
+            One cannot stress the importance of mindsets and grit in attaining achievement.  Grit, or the will to keep going, and a growth-oriented mindset are what really define one's potential, even when talent can open doors.  While a growth mindset encourages adaptability and the never-ending quest for knowledge in the face of failure, grit keeps people going when there are no instant rewards.
+            These two forces are mutually reinforcing.  Grit is naturally fostered by a growth mentality; we are more inclined to persevere through failure and setbacks when we think that abilities can be developed.  On the other hand, gritted people frequently develop a growth mentality with experience, realising that hard work, not natural talent, is what really propels success.
+            My personal formula for success is:
+            "Resilience in effort, humility in learning, and faith in continuous evolution."
+            I believe that success is not a fixed destination but a dynamic journey shaped by persistent striving and an openness to change.
+            1b. Reflection on Key Actions to Nurture a Growth Mindset
+            - Assess the level of your grittiness in the three domains of your life:
+            In my family life, the bond is often disorganized and emotionally inconsistent, which makes it difficult to rely on a strong support system. Despite this, I continue to strive for personal growth independently. In terms of friendships, I am still learning how to build meaningful relationships and understanding when to walk away from those that no longer serve my well-being. Academically, although my grades have been subpar, I’ve discovered that I am far more engaged and committed when learning is hands-on. I lack formal certifications, but I’ve recently begun taking ownership of my professional development by initiating personal projects to regain momentum after a long period of stagnation.
+            Identify and commit to two personal growth areas of grittiness:
+            Building consistent discipline and momentum, especially during periods when the excitement of new projects fades.
+            Developing alternative problem-solving approaches to better handle complex or unfamiliar challenges.
+            Identify two thinking patterns that hinder the development of your growth mindset:
+            Catastrophizing setbacks, often interpreting failure as a sign of inadequacy instead of a learning opportunity.
+            Procrastinating due to perfectionism, where I delay starting tasks unless conditions feel ideal.
+            Develop three key actions to track a commitment to a growth mindset:
+            Weekly Reflective Journaling – Track challenges, failures, and lessons learned to reinforce progress and resilience.
+            Micro-Goal Setting and Bi-Weekly Reviews – Break down larger goals into achievable milestones and assess progress regularly to stay motivated.
+            Structured Weekly Self-Evaluation – Objectively analyze what worked, what didn’t, and how to adjust without harsh self-judgment, promoting continuous improvement.
+
+          </p>
+        </details>
+        <div class="full-reflection" style="display: none;">
+          <p>Full reflection content for Lesson 3 goes here.</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="lesson4">
+        <h2>Lesson 04 Reflection -</h2>
+        <p><strong>Date:</strong> 2025-04-25</p>
+        <p><strong>Summary:</strong> Insert</p>
+        <details>
+          <p>
+            A system called goal hierarchy aids in dividing big, long-term goals into more achievable, smaller tasks.  It starts with high-level objectives, which serve as a representation of your ultimate desires and establish the course for all of your endeavors.  These bigger goals are broken down into mid-level objectives, which concentrate on important areas or benchmarks that will enable you to advance, in order to make them attainable.  Lastly, low-level goals—the practical, daily activities that propel you forward and guarantee consistent advancement towards your more ambitious goals—support these.  In addition to making goals more reachable, this methodical technique keeps you motivated and focused throughout the process.
+            Slide 8
+            Not being worked on
+            Being worked on and not yet achieved
+            Achieved
+            Developing photography lighting techniques
+
+
+            Improving Adobe Lightroom editing skills
+            Completed and led a photography photoshoot
+            Improving overall fitness and health
+
+
+            Building consistency in daily habits
+            Successfully returned to school despite anxiety
+            Establishing financial safety
+            Practicing discipline and time management
+            Participated in school volunteering events
+            Practicing regular self-affirmations
+            Managing unproductive habits
+            Adopted a habit of receiving and applying feedback
+            Developing public speaking confidence
+            Learning to seek help and balance independence
+
+
+            Initiating mini website projects
+            Designing and building my e-portfolio website
+
+
+
+
+            Enhancing my personal appearance through fashion and style exploration
+
+
+
+
+            Slide 9: What have I noticed?
+            Reflect individually on the: Trend, Patterns, Common Themes about your New Year Resolutions / Goals / Wish List in each of the category
+            The majority of my objectives centre on personal development, such as enhancing self-discipline, boosting self-esteem, and honing creative abilities. I've discovered that I have the most trouble establishing new objectives, particularly when they seem daunting.
+
+            But once I start, I usually stick with it, as shown by accomplishments like organising a photo shoot and going back to school in spite of my nervousness. I'm discovering that making progress boosts self-esteem and that taking tiny, regular steps counts more than waiting for the ideal circumstances.
+            Slide 10: Influences That Helped Me Achieve My Goals Receiving help e.g. guidance from experts,support from friends and family
+            One important element has been the support of friends, mentors, and school communities.  Other people's encouragement frequently provides me with the motivation I need to keep going.  Structured settings, such as guided modules or school, also assist me in maintaining my focus and accountability.
+            Slide 11: Challenges That Affected My Goals influencing factors e.g. relationship issues, factors that limit of enhance your goal achievement
+            Personal challenges like anxiety, self-doubt, and perfectionism have often slowed my progress. I also struggle with staying disciplined when I don’t see immediate results. However, becoming more self-aware of these patterns has helped me manage them better.
+            Slide 12: Motivation & Focus Your motivation & focus e.g. are you distracted or immersed in pursuing your goal?
+            My desire to develop and show myself that I am capable usually serves as my motivation.  However, when I'm feeling overburdened or when things are moving slowly, I occasionally lose focus.  Remaining focused on my larger objectives aids in my realignment.
+            Slide 13: Effort: how much have you tried? e.g. amount of effort and time invested in achieving your goals 
+            I've consistently worked hard, particularly in areas like personal development and creative endeavours.  I'm proud of the little steps I've done and how far I've come from where I started, even though I know I can push harder in some areas. 
+            Slide 14: My Current Goals List 10 or more of your CURRENT GOALS – short/long term (career, hobbies, bucket list, relationships, marriage, anything & everything) You may copy and paste more boxes if you have more than 10 goals.
+            Slide 15: Selected 5 Goals to Focus On
+            1. Improve my editing and photography skills
+            2. Build healthy and consistent daily habits
+            3. Enhance my personal style and presentation
+            4. Strengthen time management and self-discipline
+            5. Develop my e-portfolio and personal projects
+            Slide 18-19:
+
+            Slide 24, 28:
+            Template: Why is this goal important to you? What do you need to do to achieve this goal?
+            Top level:
+            This goal is important to me because improving my editing and photography skills will help me express my creativity, enhance my personal projects, and open up professional opportunities in photography and visual content creation. 
+            Mid level:
+            1. Take a Course on Photography and Editing
+            Complete a structured learning program to gain foundational knowledge in photography and editing.
+            2. Practice Editing Photos Regularly
+            Dedicate weekly time to editing photos, experimenting with different techniques and refining my style.
+            3. Build a Portfolio of My Best Work
+            Curate and organize a collection of my top photos to showcase my growth and skills.
+            low level:
+            1. Research Photography Courses
+            Find and enroll in a suitable online or local photography course.
+            2. Create a Consistent Editing Schedule
+            Set a regular practice time for photo editing each week
+            3. Get Feedback on My Work
+            Share edited photos with peers or mentors for constructive feedback.
+
+
+          </p>
+        </details>
+        <div class="full-reflection" style="display: none;">
+          <p>Full reflection content for Lesson 3 goes here.</p>
+        </div>
+      </div>
+  
+      <!-- <div class="tab-content" id="lesson3">
+        <h2>Lesson 02 - Mindset Shift: Fixed vs Growth</h2>
+        <p><strong>Date:</strong> 2025-04-25</p>
+        <p><strong>Summary:</strong> Insert</p>
+        <details>
+          <p>
+
+          </p>
+        </details>
+        <div class="full-reflection" style="display: none;">
+          <p>Full reflection content for Lesson 3 goes here.</p>
+        </div>
+      </div> -->
+
+
+
+      
+    </div>
+
+
     
 
-    <!-- overlay and popup -->
-    <div id="popupOverlay"></div>
-    <div id="popup">
-      <h2>Full Reflection: Lesson 01</h2>
-     <button id="closePopupBtn">Close</button>
-    </div>
   </div>
   
+</div>
 
-  <!-- Copy and paste the .reflection-entry block for each new reflection -->
+  
+    <!-- LESSON?? -->
+    <!-- <div class="reflection-entry">
+      <h2>UNtitled</h2>
+      <button class="openPopupBtn">View full reflection</button>
+   -->
+      <!-- Popup for this reflection -->
+      <!-- <div class="popupOverlay"></div>
+      <div class="popup">
+        <p>insert content</p>
+        <button class="closePopupBtn">Close</button>
+      </div>
+    </div> -->
+
+
+
+  <!-- You can duplicate the above block for each additional reflection -->
 
   <a href="/indexHome.html" class="back-button">← Back to Home</a>
 
-  <script>
-    // Get elements
-    const openPopupBtn = document.getElementById('openPopupBtn');
-    const closePopupBtn = document.getElementById('closePopupBtn');
-    const popup = document.getElementById('popup');
-    const popupOverlay = document.getElementById('popupOverlay');
+<script>
+  // Tab switching logic for reflection entries
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-    // Open pop-up
-    openPopupBtn.addEventListener('click', () => {
-        popup.style.display = 'block';
-        popupOverlay.style.display = 'block';
-    });
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.getAttribute('data-tab');
 
-    // Close pop-up
-    closePopupBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-        popupOverlay.style.display = 'none';
-    });
+      // Remove active from all buttons and contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
 
-    // Close pop-up if overlay is clicked
-    popupOverlay.addEventListener('click', () => {
-        popup.style.display = 'none';
-        popupOverlay.style.display = 'none';
+      // Add active to the selected tab and content
+      button.classList.add('active');
+      document.getElementById(target).classList.add('active');
     });
-  </script>
+  });
+</script>
+
+
 </body>
 </html>
