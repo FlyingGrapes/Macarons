@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#home">Home</a> 
+    <span>|</span>
+    <a href="#school-projects">School Projects</a>
+    <span>|</span>
+    <a href="#personal-projects">Personal Projects</a>
+    <span>|</span>
+    <a href="#photography">Photography</a>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <section id="home">
+    <h1>Home</h1>
+    <p>Welcome to my website!</p>
+  </section>
+
+  <section id="school-projects">
+    <h1>School Projects</h1>
+
+    <!-- School:S001 -->
+    <div class="project-card">
+      <img src="assets/img/school_project_sample.jpg" alt="Project Screenshot" />
+      <div class="card-content">
+        <h3>S001 – Self Reflection Site</h3>
+        <p>This project documents my lesson-based reflections and helps track my learning throughout the semester.</p>
+        <button id="openPopupBtn">Learn More</button> 
+      </div>
+    </div>              
+
+    <!-- Pop-up overlay -->
+    <div id="popupOverlay"></div>
+    <!-- Pop-up content -->
+    <div id="popup">
+      <h2>Reflections</h2> <p>This microsite includes lesson-based reflections and showcases how I apply feedback and learning growth over time.</p>
+      <a href="../S001Microsite/index.html" target="_blank">
+        <button>View Mircrosite</button>
+      </a>
+      <button id="closePopupBtn">Close</button>
+    </div>
+
+
+
+  </section>
+
+  <section id="personal-projects">
+    <h1>Personal Projects</h1>
+    <p>Here are the personal projects I created on my own.</p>
+  </section>
+
+  <section id="photography">
+    <h1>Photography</h1>
+    <p>Here is my photography showcase.</p>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/script.js"></script>
+
+
+</body>
+</html>
