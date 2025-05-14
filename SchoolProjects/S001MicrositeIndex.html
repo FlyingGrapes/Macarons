@@ -33,14 +33,14 @@
     }
 
     .back-button {
-      margin: 20px;
-      display: inline-block;
-      background-color: #ccc;
-      padding: 10px 15px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      border-radius: 5px;
+      margin: 10px; /* Space around the button (outside it) */
+      display: inline-block; /* Makes it behave like text (inline), but still accepts width/padding */
+      background-color: #ccc; /* Light grey background */
+      padding: 5px 15px; /* Top/Bottom: 5px, Left/Right: 15px */
+      text-decoration: none; /* Removes underline from link */
+      color: black; /* Text color */
+      font-weight: bold; /* Makes the text bold */
+      border-radius: 5px; /* Rounds the corners */
     }
 
     .white-space-preserve {
@@ -75,7 +75,7 @@
     .popup button {
       margin-top: 20px;
     }
-
+  /* TABA */
     .tabs {
       max-width: 800px;
       margin: 20px auto;
@@ -89,6 +89,17 @@
       flex-wrap: wrap;
     }
 
+    .tab-content-container {
+      overflow: hidden;
+      position: relative;
+      height: 300px; /* adjust to fit your content */
+    }
+
+    .tab-slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 400%; /* 4 tabs = 4 x 100% */
+    }
     .tab-btn {
       padding: 10px 15px;
       background: #eee;
@@ -103,15 +114,21 @@
     }
 
     .tab-content {
-      display: none;
+      display: block;
       background: white;
       padding: 20px;
       border-left: 5px solid #555;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: opacity 1s ease-in-out;
+      flex: 1 0 100%;
+      opacity: 1 !important;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .tab-content.active {
       display: block;
+      opacity: 1;
     }
 
     .full-reflection {
@@ -140,87 +157,86 @@
   <div class="tab-content-container">
     <!-- Lesson 02 Reflection -->
     <div class="tab-content active" id="lesson2">
-        <h2>Lesson 02 - Mindset Shift: Fixed vs Growth</h2>
-        <p><strong>Date:</strong> 2025-04-25</p>
-        <p><strong>Summary:</strong> Learned the difference between fixed and growth mindsets. I’m learning to reframe my thoughts and catch thinking traps. Still working on overcoming self-doubt and building discipline.</p>
+      <h2>Lesson 02 - Mindset Shift: Fixed vs Growth</h2>
+      <p><strong>Date:</strong> 2025-04-25</p>
+      <p><strong>Summary:</strong> Learned the difference between fixed and growth mindsets. I’m learning to reframe my thoughts and catch thinking traps. Still working on overcoming self-doubt and building discipline.</p>
+      <details>
+        <p>
+          L02
+          6
+          https://www.youtube.com/watch ?v=T6A-2Z59dJk
+          What is a fixed mindset?
+          What is a growth mindset?
+          The film tells the tale of László Polgár, who held the opinion that talent is something that is developed via hard work and the correct circumstances rather than something that is innate.  He raised his three daughters, Susan, Sophia, and Judit, to be chess champions as evidence of this.  All three were successful; Judit even defeated world champion Garry Kasparov to become the world's best female chess player.  Their accomplishments demonstrated that diligence and commitment are more important than innate ability.
+          The idea that your skills are predetermined from birth—that you can't change whether you're good at something or not—is known as a fixed mindset.  A growth mindset, on the other hand, is the conviction that abilities can be acquired with work, education, and perseverance. The Polgár sisters’ story is a clear example of the power of a growth mindset.
 
-        <details>
-          <p>
-            L02
-            6
-            https://www.youtube.com/watch ?v=T6A-2Z59dJk
-            What is a fixed mindset?
-            What is a growth mindset?
-            The film tells the tale of László Polgár, who held the opinion that talent is something that is developed via hard work and the correct circumstances rather than something that is innate.  He raised his three daughters, Susan, Sophia, and Judit, to be chess champions as evidence of this.  All three were successful; Judit even defeated world champion Garry Kasparov to become the world's best female chess player.  Their accomplishments demonstrated that diligence and commitment are more important than innate ability.
-            The idea that your skills are predetermined from birth—that you can't change whether you're good at something or not—is known as a fixed mindset.  A growth mindset, on the other hand, is the conviction that abilities can be acquired with work, education, and perseverance. The Polgár sisters’ story is a clear example of the power of a growth mindset.
-
-            9-11
-            Personal Reflection: QUIZ (• Choose 5 statements which best describe you. • Note down the number next to the statement.)
-            Reflection based on chosen statements.
-            1. There are just some things I’ll never be good at.
-            It may be true, but I can become proficient at what I do if I maintain the discipline to concentrate on studying well.
-            2. When I make a mistake, I try to learn from it.
-            Yes, I do.  I adore constructive criticism.  It gives me other perspectives and ideas about how I present myself, which is helpful when I'm getting ready for a job or even when I'm handling difficult situations.
-            7. I feel good when I do something others cannot.
-            Naturally, it makes me happy to be able to assist others. 
-            8. It’s possible to change how intelligent you are.
-            sure, with time and work, you may expand your knowledge and life applications, be a better person
-            10. I enjoy taking on new unfamiliar challenges or tasks.
-            To see my development, I sometimes need to pull back from learning so that I can apply what I've learnt to real-world situations.
-            Results: 3 Even, 2 Odds (Growth Mindset)
-
+          9-11
+          Personal Reflection: QUIZ (• Choose 5 statements which best describe you. • Note down the number next to the statement.)
+          Reflection based on chosen statements.
+          1. There are just some things I’ll never be good at.
+          It may be true, but I can become proficient at what I do if I maintain the discipline to concentrate on studying well.
+          2. When I make a mistake, I try to learn from it.
+          Yes, I do.  I adore constructive criticism.  It gives me other perspectives and ideas about how I present myself, which is helpful when I'm getting ready for a job or even when I'm handling difficult situations.
+          7. I feel good when I do something others cannot.
+          Naturally, it makes me happy to be able to assist others. 
+          8. It’s possible to change how intelligent you are.
+          sure, with time and work, you may expand your knowledge and life applications, be a better person
+          10. I enjoy taking on new unfamiliar challenges or tasks.
+          To see my development, I sometimes need to pull back from learning so that I can apply what I've learnt to real-world situations.
+          Results: 3 Even, 2 Odds (Growth Mindset)
 
 
-            13
-            Share 4- 5 examples of fixed and growth mindset statements, actions and behaviours you encounter in your daily lives and categorize them into Personal, Relationship and Academic / Career
-            (Personal) “I have not been acing this hobby/skill, I shall look for alternative ways for quality learn/practice instead of mindlessly practicing. Maybe I will ask people around me, or research tutorials online”
-            (Relationship) “Family has many conflicts, and tends to communicate loudly and rudely. Even though I understand their frustrations, it is not the way to be acting”
-            (Academic/Career) “I took a two-year deferment from polytechnic to explore different paths and take a short break. During that time, I pursued a private diploma in Fashion Design. Now, I’m about four years older than most of my peers. Although I’ve gained unique experiences, I recognize that my knowledge in both fashion and tech is still developing due to limited exposure and hands-on experience.”
 
-            15
-            Do you exhibit the characteristics of a growth or fixed mindset? 
-            Yes, I exhibit characteristics of a growth mindset. While I do struggle with laziness and often find it difficult to stay disciplined compared to some of my peers, I genuinely believe that with the right guidance, consistent effort, and a willingness to learn, I can improve and achieve my goals. I don't see my weaknesses as permanent, but rather as areas I can work on over time.
+          13
+          Share 4- 5 examples of fixed and growth mindset statements, actions and behaviours you encounter in your daily lives and categorize them into Personal, Relationship and Academic / Career
+          (Personal) “I have not been acing this hobby/skill, I shall look for alternative ways for quality learn/practice instead of mindlessly practicing. Maybe I will ask people around me, or research tutorials online”
+          (Relationship) “Family has many conflicts, and tends to communicate loudly and rudely. Even though I understand their frustrations, it is not the way to be acting”
+          (Academic/Career) “I took a two-year deferment from polytechnic to explore different paths and take a short break. During that time, I pursued a private diploma in Fashion Design. Now, I’m about four years older than most of my peers. Although I’ve gained unique experiences, I recognize that my knowledge in both fashion and tech is still developing due to limited exposure and hands-on experience.”
 
-            Provide examples of both mindsets to support your stance.  
-            Personal
-            Growth Mindset: I’ve started picking up new habits like journaling and self-reflection. Although it takes discipline, I believe these habits will help me grow over time. I also actively seek ways to improve my mindset and stay open to change.
-            Fixed Mindset: Sometimes I feel like I’m just naturally lazy or not a motivated person, which makes it harder for me to take the first step in forming positive routines.
-            Relationship
-            Growth Mindset: I’ve come to understand that communication is a skill. I make an effort to express myself more clearly and calmly, and I try to learn from past misunderstandings instead of shutting down.
-            Fixed Mindset: In the past, I used to think that if someone didn’t understand me from the start, we were just incompatible—so I would give up instead of working through the issues.
-            Academic / Career
-            Growth Mindset: I take initiative to look for resources, ask questions, and get hands-on practice when I don’t understand something. I also value constructive criticism from peers and use it to improve my work.
-            Fixed Mindset: There are times when I’ve thought, “I’ll never be as knowledgeable or quick at navigating between software, applications, and operating systems.” These doubts created a barrier that made me hesitant to explore and learn effectively.
+          15
+          Do you exhibit the characteristics of a growth or fixed mindset? 
+          Yes, I exhibit characteristics of a growth mindset. While I do struggle with laziness and often find it difficult to stay disciplined compared to some of my peers, I genuinely believe that with the right guidance, consistent effort, and a willingness to learn, I can improve and achieve my goals. I don't see my weaknesses as permanent, but rather as areas I can work on over time.
 
-            19
-            List 3 Growth Mindset statements for the class to work on it together!
-            “Challenges help me grow stronger and more capable.”
-            “Feedback is an opportunity to get better, not a sign of failure.”
-            “My abilities can improve over time with consistent effort and learning.”
-            “I learn more when I step out of my comfort zone.”
-            “Success comes from trying, learning, and not giving up.”
+          Provide examples of both mindsets to support your stance.  
+          Personal
+          Growth Mindset: I’ve started picking up new habits like journaling and self-reflection. Although it takes discipline, I believe these habits will help me grow over time. I also actively seek ways to improve my mindset and stay open to change.
+          Fixed Mindset: Sometimes I feel like I’m just naturally lazy or not a motivated person, which makes it harder for me to take the first step in forming positive routines.
+          Relationship
+          Growth Mindset: I’ve come to understand that communication is a skill. I make an effort to express myself more clearly and calmly, and I try to learn from past misunderstandings instead of shutting down.
+          Fixed Mindset: In the past, I used to think that if someone didn’t understand me from the start, we were just incompatible—so I would give up instead of working through the issues.
+          Academic / Career
+          Growth Mindset: I take initiative to look for resources, ask questions, and get hands-on practice when I don’t understand something. I also value constructive criticism from peers and use it to improve my work.
+          Fixed Mindset: There are times when I’ve thought, “I’ll never be as knowledgeable or quick at navigating between software, applications, and operating systems.” These doubts created a barrier that made me hesitant to explore and learn effectively.
 
-
-            22-24
-            404 Error. Cant view video.
-            23
-            How does our perspectives influence our feelings, thoughts and actions?
-            Our viewpoints have a big impact on how we feel, think, and behave.  They influence our interpretation of events, influencing our feelings of excitement, anxiety, or indifference.  An optimistic viewpoint encourages hope and action, whereas a pessimistic one frequently results in negative thoughts and avoidance.  Our perspectives shape how we think about ourselves and other people, and they also determine how we behave—whether we participate, retreat, or take the initiative.  In the end, our viewpoint serves as a filter that influences our mental and emotional reactions and moulds our behaviour appropriately.  Therefore, changing our point of view can change how we see and react to the world.
+          19
+          List 3 Growth Mindset statements for the class to work on it together!
+          “Challenges help me grow stronger and more capable.”
+          “Feedback is an opportunity to get better, not a sign of failure.”
+          “My abilities can improve over time with consistent effort and learning.”
+          “I learn more when I step out of my comfort zone.”
+          “Success comes from trying, learning, and not giving up.”
 
 
-            24
-            “Your vision is only actionable if you say it out loud. If you keep it to yourself, it will remain a figment of your imagination.” Simon Sinek  
+          22-24
+          404 Error. Cant view video.
+          23
+          How does our perspectives influence our feelings, thoughts and actions?
+          Our viewpoints have a big impact on how we feel, think, and behave.  They influence our interpretation of events, influencing our feelings of excitement, anxiety, or indifference.  An optimistic viewpoint encourages hope and action, whereas a pessimistic one frequently results in negative thoughts and avoidance.  Our perspectives shape how we think about ourselves and other people, and they also determine how we behave—whether we participate, retreat, or take the initiative.  In the end, our viewpoint serves as a filter that influences our mental and emotional reactions and moulds our behaviour appropriately.  Therefore, changing our point of view can change how we see and react to the world.
 
-            Fixed Mindset Statement:
-            "I'm not good at this, so I should just give up."
-            Growth Mindset Statement:
-            "I’m not good at this yet, but with effort and persistence, I can improve and master it."
 
-          </p>
-        </details>
-      </div>
+          24
+          “Your vision is only actionable if you say it out loud. If you keep it to yourself, it will remain a figment of your imagination.” Simon Sinek  
 
-      <div class="tab-content" id="lesson3">
+          Fixed Mindset Statement:
+          "I'm not good at this, so I should just give up."
+          Growth Mindset Statement:
+          "I’m not good at this yet, but with effort and persistence, I can improve and master it."
+
+        </p>
+      </details>
+    </div>
+    
+    <div class="tab-content" id="lesson3">
         <h2>Lesson 03 CA Reflection -</h2>
         <p><strong>Date:</strong> 2025-04-25</p>
         <p><strong>Summary:</strong> Insert</p>
@@ -253,12 +269,12 @@
 
           </p>
         </details>
-        <div class="full-reflection" style="display: none;">
-          <p>Full reflection content for Lesson 3 goes here.</p>
-        </div>
+      <div class="full-reflection" style="display: none;">
+        <p>Full reflection content for Lesson 3 goes here.</p>
       </div>
+    </div>
 
-      <div class="tab-content" id="lesson4">
+    <div class="tab-content" id="lesson4">
         <h2>Lesson 04 Reflection -</h2>
         <p><strong>Date:</strong> 2025-04-25</p>
         <p><strong>Summary:</strong> Insert</p>
@@ -344,76 +360,39 @@
 
           </p>
         </details>
-        <div class="full-reflection" style="display: none;">
-          <p>Full reflection content for Lesson 3 goes here.</p>
-        </div>
+      <div class="full-reflection" style="display: none;">
+        <p>Full reflection content for Lesson 3 goes here.</p>
       </div>
-  
-      <!-- <div class="tab-content" id="lesson3">
-        <h2>Lesson 02 - Mindset Shift: Fixed vs Growth</h2>
-        <p><strong>Date:</strong> 2025-04-25</p>
-        <p><strong>Summary:</strong> Insert</p>
-        <details>
-          <p>
-
-          </p>
-        </details>
-        <div class="full-reflection" style="display: none;">
-          <p>Full reflection content for Lesson 3 goes here.</p>
-        </div>
-      </div> -->
-
-
-
-      
     </div>
 
-
-    
-
   </div>
-  
+
 </div>
-
-  
-    <!-- LESSON?? -->
-    <!-- <div class="reflection-entry">
-      <h2>UNtitled</h2>
-      <button class="openPopupBtn">View full reflection</button>
-   -->
-      <!-- Popup for this reflection -->
-      <!-- <div class="popupOverlay"></div>
-      <div class="popup">
-        <p>insert content</p>
-        <button class="closePopupBtn">Close</button>
-      </div>
-    </div> -->
-
 
 
   <!-- You can duplicate the above block for each additional reflection -->
 
   <a href="/indexHome.html" class="back-button">← Back to Home</a>
 
-<script>
-  // Tab switching logic for reflection entries
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
+  <script>
+    // Tab switching logic for reflection entries
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const target = button.getAttribute('data-tab');
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
 
-      // Remove active from all buttons and contents
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
+        // Remove active from all buttons and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
 
-      // Add active to the selected tab and content
-      button.classList.add('active');
-      document.getElementById(target).classList.add('active');
+        // Add active to the selected tab and content
+        button.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
     });
-  });
-</script>
+  </script>
 
 
 </body>
