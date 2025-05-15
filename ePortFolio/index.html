@@ -9,17 +9,33 @@
 </head>
 
 <body>
+  <!-- topbar -->
+  <div class="topbar">
+    <a href="#" class="menu"><ion-icon name="apps-outline"></ion-icon></a>
+    <!-- NAV -->
+    <ul class="nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#school-projects">School Projects</a></li>
+      <li><a href="#personal-projects">Personal Projects</a></li>
+      <li><a href="#photography">Photography</a></li>
+    </ul>
+    <!-- editing -->
+    <div class="search">
+      <input type="text" placeholder="Search" />
+      <ion-icon name="search-outline"></ion-icon>
+    </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="#home">Home</a> 
-    <span>|</span>
-    <a href="#school-projects">School Projects</a>
-    <span>|</span>
-    <a href="#personal-projects">Personal Projects</a>
-    <span>|</span>
-    <a href="#photography">Photography</a>
-  </nav>
+    <!-- for mobile design -->
+    <!-- <ul class="nav-collapse">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#school-projects">School Projects</a></li>
+      <li><a href="#personal-projects">Personal Projects</a></li>
+      <li><a href="#photography">Photography</a></li>
+    </ul> -->
+
+  </div>
+
+
 
   <!-- PAGE CONTENT -->
   <section id="home">
@@ -32,7 +48,7 @@
 
     <!-- School:S001 -->
     <div class="project-card">
-      <img src="assets/img/school_project_sample.jpg" alt="Project Screenshot" />
+      <img src="assets/img/DSC02267ShinnPix.jpg" alt="Project Screenshot" />
       <div class="card-content">
         <h3>S001 – Self Reflection Site</h3>
         <p>This project documents my lesson-based reflections and helps track my learning throughout the semester.</p>
@@ -63,11 +79,45 @@
   <section id="photography">
     <h1>Photography</h1>
     <p>Here is my photography showcase.</p>
-  </section>
+    
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./assets/img/DSC02250ShinnPix.jpg" alt="Cat 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/DSC02251ShinnPix.jpg" alt="Cat 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/img/DSC02254ShinnPix.jpg" alt="Cat 3">
+        </div>
 
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+  </section>
+  
+  
+  <!-- js codes (???) -->
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./js/script.js"></script>
+
+  <!-- ion-icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 </body>
