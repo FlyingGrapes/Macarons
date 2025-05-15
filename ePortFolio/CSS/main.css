@@ -134,13 +134,13 @@ header {
 } */
 
 /* Image styling */
-/* .swiper .swiper-wrapper .swiper-slide img {
+.swiper .swiper-wrapper .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-} */
+}
 
 /* Navigation buttons */
 /* .swiper-button-next,
