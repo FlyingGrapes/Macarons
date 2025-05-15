@@ -1,16 +1,17 @@
 
 body {
     scroll-behavior: smooth; /* Smooth scrolling effect */
-
+    margin: 30px !important;    /* force spacing around entire body */
+    border: 5px solid #333 !important; /* force visible border */
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 1.3em;
 }
-
 .menu {
     color: rgb(255, 255, 255);
     font-size: 2em;
 }
-/* updated nav */
-
-.topbar {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,28 +26,32 @@ body {
   justify-content: center;
 }
 .nav li a {
-    color: rgb(0, 0, 0);
+    color: grey;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s;
-    padding: 10px;
+    padding: 20px;
 }
-.nav li:hover {
+.nav li:hover a {
     color: var(--primary);
 }
-
-.search:hover {
-    width: 300px;
+.nav-collapse {
+    display: none;
 }
 
+
+/* Search */
 .search {
     position: relative;
-    width: 120px;
+    width: 130px;
     height: 40px;
     transition: 0.5s;
+}
+.search:hover {
+    width: 300px;
 }
 .search input {
     position: absolute;
@@ -62,6 +67,23 @@ body {
     padding: 0 10px 0 5px;
     backdrop-filter: blur(10px);
 }
+.search input::placeholder {
+    color: white;
+    text-transform: uppercase;
+    transform: translate(10px);
+    font-weight: 300;
+}
+.search ion-icon {
+    font-size: 1.4em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
+    color: white;
+    padding-left: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
 
 /* Photography section */
 #photography {
@@ -70,9 +92,8 @@ body {
 }
 /* Swiper container */
 .swiper {
-    max-width: 200px;
-    
-
+    width: 90%;
+    /* width: 200px; */
   /* width: 80%;
   max-width: 500px;
   height: auto; /* let it grow based on image */
@@ -86,41 +107,43 @@ body {
 
 /* Wrapper & slides */
 .swiper .swiper-wrapper {
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
 }
 
 .swiper .swiper-wrapper .swiper-slide {
-  display: flex;
+    width: 100px;
+    /* width: auto;
+    height: 80%; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 /* Remove weird overlay */
-.swiper .swiper-wrapper .swiper-slide::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-
-}
+/* .swiper .swiper-wrapper .swiper-slide::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+} */
 
 /* Image styling */
-.swiper .swiper-wrapper .swiper-slide img {
+/* .swiper .swiper-wrapper .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
+} */
 
 /* Navigation buttons */
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
   color: black;
   z-index: 10;
@@ -130,7 +153,7 @@ body {
   padding: 10px;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* .swiper-button-next::after,
 .swiper-button-prev::after {

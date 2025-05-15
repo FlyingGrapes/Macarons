@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <title>My Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-  <!-- topbar -->
-  <div class="topbar">
+  <header>
     <a href="#" class="menu"><ion-icon name="apps-outline"></ion-icon></a>
     <!-- NAV -->
     <ul class="nav">
@@ -26,14 +28,14 @@
     </div>
 
     <!-- for mobile design -->
-    <!-- <ul class="nav-collapse">
+    <ul class="nav-collapse">
       <li><a href="#home">Home</a></li>
       <li><a href="#school-projects">School Projects</a></li>
       <li><a href="#personal-projects">Personal Projects</a></li>
       <li><a href="#photography">Photography</a></li>
-    </ul> -->
+    </ul>
 
-  </div>
+  </header>
 
 
 
@@ -48,7 +50,7 @@
 
     <!-- School:S001 -->
     <div class="project-card">
-      <img src="assets/img/DSC02267ShinnPix.jpg" alt="Project Screenshot" />
+      <img src="assets/img/ChessPint1-cropped.jpg" alt="S001 Intro Picture" />
       <div class="card-content">
         <h3>S001 – Self Reflection Site</h3>
         <p>This project documents my lesson-based reflections and helps track my learning throughout the semester.</p>
@@ -113,12 +115,14 @@
   <!-- js codes (???) -->
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/script.js"></script>
+
 
   <!-- ion-icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
+  
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
