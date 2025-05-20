@@ -13,11 +13,11 @@ header {
 
 body {
     scroll-behavior: smooth; /* Smooth scrolling effect */
-    margin: 80px !important;    /* force spacing around entire body */
+    margin: 60px 130px !important;    /* force spacing around entire body */
     border: 5px solid #333 !important; /* force visible border */
     padding: 0 !important;
     box-sizing: border-box !important;
-    font-size: 1.3em;
+    font-size: 1.3em !important;
     text-align: center;
 }
 
@@ -87,6 +87,18 @@ body {
     cursor: pointer;
 }
 
+section {
+    padding: 10px 30px;
+    min-height: 50vh; /* Each section at least one screen tall */
+    box-sizing: border-box;
+}
+
+#home { background-color: #f9f9f9; }
+#school-projects { background-color: #e0e0e0; }
+#personal-projects { background-color: #d0d0d0; }
+#photography { background-color: #c0c0c0; }
+
+
 /* Home section */
 .home-section {
   padding: 3rem 2rem;
@@ -96,14 +108,12 @@ body {
   font-family: 'Segoe UI', sans-serif;
   animation: fadeIn 1.5s ease-in;
 }
-
 .home-section h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #4b0082;
+  color: #bea391;
   font-weight: 700;
 }
-
 .home-section p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -130,17 +140,8 @@ body {
 }
 /* Swiper container */
 .swiper {
-    width: 90%;
-    /* width: 200px; */
-  /* width: 80%;
-  max-width: 500px;
-  height: auto; /* let it grow based on image */
-  /* margin: 0 auto;
-  position: relative;
-  aspect-ratio: 2 / 3; /* force swiper container to match image aspect */
-  /* background: #f4f4f4;
-  border-radius: 10px;
-  overflow: hidden; */ 
+    width: 350px;
+    height: 525px;
 }
 
 /* Wrapper & slides */
@@ -180,19 +181,6 @@ body {
     object-position: center;
 }
 
-/* Navigation buttons */
-/* .swiper-button-next,
-.swiper-button-prev {
-  color: black;
-  z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-} */
-
 /* .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px;
@@ -201,19 +189,7 @@ body {
 
 
 
-
-section {
-    padding: 10px 30px;
-    min-height: 50vh; /* Each section at least one screen tall */
-    box-sizing: border-box;
-}
-
-#home { background-color: #f9f9f9; }
-#school-projects { background-color: #e0e0e0; }
-#personal-projects { background-color: #d0d0d0; }
-#photography { background-color: #c0c0c0; }
-
-
+/* school section */
 /* Styling for cards */
 .project-card {
     background-color: #525252;
@@ -224,30 +200,47 @@ section {
     margin: 20px auto; /* center it */
     border: 10px solid #444;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* narrower for vertical look */
+    max-width: 300px; /* narrower for vertical look */
     color: white; /* text visible on dark bg */
     border-radius: 10px;
 }
-
-
 .project-card img {
-    width: 100%;
+    width: 70%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
+    align-self: center; /* THIS is the key! */
 }
-
-
 .card-content {
 flex: 1;
 }
-
 .card-content h3 {
 margin: 0 0 10px;
 }
-
 .card-content p {
 margin: 0 0 10px;
 }
+
+/* bounce effect */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+}
+
 
 /* Styling for pop-up */
 #popup {
@@ -274,7 +267,7 @@ margin: 0 0 10px;
 }
 
 
-/* About me */
+/* Contacts */
 .contact-section {
   padding: 3rem 2rem;
   background-color: #f9f9f9;
@@ -286,7 +279,7 @@ margin: 0 0 10px;
 
 .contact-section h2 {
   font-size: 2rem;
-  color: #4b0082;
+  color: #bea391;
   margin-bottom: 1.5rem;
 }
 

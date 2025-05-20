@@ -81,3 +81,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// .bounce-in effect
+    const cards = document.querySelectorAll('.project-card');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('bounce-in');
+                observer.unobserve(entry.target); // Optional: animate only once
+            }
+        });
+    }, {
+        threshold: 0.2 // Adjust based on how early you want the animation to trigger
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
