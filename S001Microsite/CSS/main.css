@@ -13,13 +13,11 @@ body {
   background-color: #f0f0f0;
   border-radius: 8px;
   padding: 20px;
-  max-width: 1000px;      /* Limits the width */
+  max-width: 800px;      /* Limits the width */
   margin: 0 auto;        /* Centers the block horizontally */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Optional soft shadow */
   font-family: "Segoe UI", sans-serif;  /* Optional: Cleaner font */
 
-
-  cursor: none; /* Hide default cursor */
 }
 
 /* 3js */
