@@ -9,7 +9,6 @@ header {
 
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   border-radius: 8px;
   padding: 20px;
@@ -19,6 +18,32 @@ body {
   font-family: "Segoe UI", sans-serif;  /* Optional: Cleaner font */
 
 }
+
+/* Font CAPS */
+.dropcap {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+  /* fallback */
+  font-style: oblique;
+}
+h2, h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h3, h4 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.1em; /* Optional: tighten the gap */
+}
+
 
 /* 3js */
 
